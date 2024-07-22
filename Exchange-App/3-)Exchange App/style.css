@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;600;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #e599f7, #b197fc);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#exchange {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#amount{
+    width: 50%;
+    align-self: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    
+}
+.select-wrapper select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+}
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    appearance: none;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: '▼';
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+#exchange i {
+    font-size: 24px;
+    color: #333;
+    margin: 10px 0;
+}
+
+#exchange button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #b197fc;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#result {
+    margin-top: 20px;
+    color: #333;
+}
+
+#converted-amount,
+#exchange-rate {
+    font-size: 18px;
+}
+
+#converted-amount {
+    font-weight: 600;
+}
+
+/* Custom scrollbar styles */
+.select-wrapper select::-webkit-scrollbar {
+    width: 10px;
+}
+
+.select-wrapper select::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.select-wrapper select::-webkit-scrollbar-thumb {
+    background: #b197fc;
+    border-radius: 5px;
+}
+
+.select-wrapper select::-webkit-scrollbar-thumb:hover {
+    background: #9a6dff;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    #exchange {
+        gap: 5px;
+    }
+
+    #exchange input,
+    .select-wrapper select,
+    #exchange button {
+        width: 100%;
+    }
+}
